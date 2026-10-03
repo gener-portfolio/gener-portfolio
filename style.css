@@ -68,41 +68,36 @@ header {
   background: #002d5a;
 }
 
-/* Hero Section with Wave Background */
+/* Hero Section */
 .hero {
   position: relative;
-  padding: 5rem 2rem 0; /* remove bottom padding so wave connects */
+  padding: 5rem 2rem 0;
   background: linear-gradient(to bottom right, #f0f4ff, #ffffff);
   overflow: hidden;
-  z-index: 0;
 }
 
-/* Top wave */
-.hero::before {
-  content: "";
+/* Waves */
+.wave-top,
+.wave-bottom {
   position: absolute;
+  left: 0;
+  width: 100%;
+  line-height: 0;
+}
+
+.wave-top {
   top: 0;
-  left: 0;
-  width: 100%;
-  height: 120px;
-  z-index: -1; /* push behind content */
-  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23f0f4ff" fill-opacity="1" d="M0,160L48,176C96,192,192,224,288,213.3C384,203,480,149,576,128C672,107,768,117,864,144C960,171,1056,213,1152,213.3C1248,213,1344,171,1392,149.3L1440,128L1440,0L0,0Z"></path></svg>');
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
-/* Bottom wave */
-.hero::after {
-  content: "";
-  position: absolute;
+.wave-bottom {
   bottom: 0;
-  left: 0;
+}
+
+.wave-top svg,
+.wave-bottom svg {
+  display: block;
   width: 100%;
   height: 120px;
-  z-index: -1; /* push behind content */
-  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23004080" fill-opacity="1" d="M0,64L48,80C96,96,192,128,288,138.7C384,149,480,139,576,144C672,149,768,171,864,186.7C960,203,1056,213,1152,197.3C1248,181,1344,139,1392,117.3L1440,96L1440,320L0,320Z"></path></svg>');
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 /* Hero Content */
@@ -113,7 +108,7 @@ header {
   gap: 3rem;
   max-width: 1100px;
   margin: 0 auto;
-  position: relative; /* ensures content stays above waves */
+  position: relative;
   z-index: 1;
 }
 
@@ -196,24 +191,10 @@ footer {
   padding: 1rem;
   background: linear-gradient(to right, #004080, #002d5a);
   color: #fff;
-  margin-top: 0; /* remove gap so footer connects with wave */
+  margin-top: 0;
 }
 
 /* Animation */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .hero-content {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .hero-image img {
-    width: 250px;
-    margin-top: 1.5rem;
-  }
-}
+  to { opacity: 1; transform

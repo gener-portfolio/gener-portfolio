@@ -192,16 +192,23 @@ header {
 
 /* About Section (matches Home styling) */
 .about {
-  max-width: 1100px;
-  margin: 5rem auto;
-  padding: 2rem;
+  padding: 5rem 2rem;
+  background: linear-gradient(to bottom right, #f0f4ff, #ffffff);
+}
+
+.about-content {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  opacity: 0;
-  transform: translateY(20px);
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  max-width: 1100px;
+  margin: 0 auto;
   animation: fadeIn 1.2s ease-in-out forwards;
+}
+
+.about-text {
+  flex: 1;
+  max-width: 600px;
 }
 
 .about h1 {
@@ -222,7 +229,6 @@ header {
 .about p {
   font-size: 1rem;
   line-height: 1.8;
-  max-width: 900px;
   margin-bottom: 1rem;
 }
 
@@ -242,7 +248,21 @@ header {
   transform: translateX(5px);
 }
 
-/* Footer with Wave */
+/* About Image (same size and style as Home) */
+.about-image img {
+  width: 350px;
+  border-radius: 12px;
+  border: 3px solid #e0e0e0;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  background: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.about-image img:hover {
+  transform: scale(1.03);
+}
+
+/* Footer */
 footer {
   position: relative;
   text-align: center;
@@ -265,7 +285,6 @@ footer {
   height: 120px;
 }
 
-/* Footer Text */
 footer p {
   position: relative;
   z-index: 1;
@@ -282,19 +301,16 @@ footer p {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .hero-content {
+  .hero-content,
+  .about-content {
     flex-direction: column;
     text-align: center;
   }
 
-  .hero-image img {
+  .hero-image img,
+  .about-image img {
     width: 250px;
     margin-top: 1.5rem;
-  }
-
-  .about {
-    align-items: center;
-    text-align: center;
   }
 
   .about ul {
@@ -302,31 +318,4 @@ footer p {
     padding-left: 1.5rem;
     text-align: left;
   }
-}
-
-.about-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 3rem;
-  max-width: 1100px;
-  margin: 0 auto;
-  animation: fadeIn 1.2s ease-in-out forwards;
-}
-
-.about-text {
-  flex: 1;
-}
-
-.about-image img {
-  width: 350px;
-  border-radius: 12px;
-  border: 3px solid #e0e0e0;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
-  background: transparent;
-  transition: all 0.3s ease-in-out;
-}
-
-.about-image img:hover {
-  transform: scale(1.03);
 }

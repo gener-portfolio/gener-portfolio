@@ -131,3 +131,18 @@ footer {
   color: #fff;
   margin-top: 3rem;
 }
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.hero-image img {
+  width: 350px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  background: transparent;
+}
+

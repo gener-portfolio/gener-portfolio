@@ -491,11 +491,12 @@ footer {
 .popup-image {
   display: none;
   position: absolute;
-  top: 0;          /* aligns vertically with the text */
-  right: -480px;    /* moves the popup to the left side */
+  top: 0;
+  right: -480px; /* adjust to fit your layout */
   z-index: 10;
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transform: translateX(50px); /* start slightly off-screen */
+  transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
 .popup-image img {
@@ -508,6 +509,7 @@ footer {
 .hover-title:hover .popup-image {
   display: block;
   opacity: 1;
+  transform: translateX(0); /* slides into place */
 }
 
 

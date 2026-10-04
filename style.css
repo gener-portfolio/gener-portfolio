@@ -476,7 +476,30 @@ footer {
 }
 
 .popup-image img {
-  width: 220px;
+  width: 440px;
+  border: 2px solid #00a99d;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+.hover-title {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  color: #fff;
+}
+
+.popup-image {
+  display: none;
+  position: absolute;
+  top: 0;          /* aligns vertically with the text */
+  left: -480px;    /* moves the popup to the left side */
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.popup-image img {
+  width: 440px; /* double size */
   border: 2px solid #00a99d;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.4);
@@ -486,4 +509,6 @@ footer {
   display: block;
   opacity: 1;
 }
+
+
 

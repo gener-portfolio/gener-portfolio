@@ -511,6 +511,29 @@ footer {
   opacity: 1;
   transform: translateX(0); /* slides into place */
 }
+.about-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.about-image {
+  position: sticky;   /* keeps it fixed while scrolling within section */
+  top: 100px;         /* distance from top of viewport */
+  align-self: flex-start;
+}
+
+.about-image img {
+  width: 350px;
+  border-radius: 12px;
+  border: 3px solid #00a99d;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease-in-out;
+}
+
+.about-image img:hover {
+  transform: scale(1.03);
+}
 
 
 

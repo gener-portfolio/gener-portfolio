@@ -307,3 +307,42 @@ footer {
     margin-top: 1.5rem;
   }
 }
+/* Diploma Hover Popup */
+.diploma-text {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  color: #00a99d;
+  transition: color 0.3s ease;
+}
+
+.diploma-text:hover {
+  color: #fff;
+}
+
+.diploma-image {
+  display: none;
+  position: absolute;
+  top: 120%;
+  left: 0;
+  z-index: 10;
+}
+
+.diploma-text:hover .diploma-image {
+  display: block;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.diploma-image img {
+  width: 400px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+/* Smooth fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+

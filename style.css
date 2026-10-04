@@ -394,4 +394,17 @@ footer {
   text-align: center;
   padding: 1.5rem;
 }
+/* 3D tilt effect */
+.card-container {
+  perspective: 1000px;
+}
+
+.card {
+  transition: transform 0.3s ease;
+  transform-style: preserve-3d;
+}
+
+.card:hover {
+  transform: rotateY(10deg) rotateX(5deg);
+}
 

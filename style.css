@@ -458,4 +458,32 @@ footer {
 .card-back li {
   margin-bottom: 0.5rem;
 }
+.hover-title {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  color: #fff;
+}
+
+.popup-image {
+  display: none;
+  position: absolute;
+  top: 120%;
+  left: 0;
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.popup-image img {
+  width: 220px;
+  border: 2px solid #00a99d;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.hover-title:hover .popup-image {
+  display: block;
+  opacity: 1;
+}
 

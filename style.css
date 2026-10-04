@@ -90,7 +90,7 @@ header {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('backround 4k.jpg');
+  background-image: url('backround 4k.jpg'); /* check spelling/path */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -197,14 +197,15 @@ header {
   animation: fadeIn 1.2s ease-in-out;
 }
 
-/* Shared Section Styles */
+/* Shared Section Styles (About, Experience, Skills, Contact) */
 .about,
 .experience,
+.skills,
 .contact {
   position: relative;
   padding: 5rem 2rem;
   min-height: 100vh;
-  background-image: url('backround 4k.jpg');
+  background-image: url('backround 4k.jpg'); /* reuse same background */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -213,6 +214,7 @@ header {
 
 .about::after,
 .experience::after,
+.skills::after,
 .contact::after {
   content: "";
   position: absolute;
@@ -223,6 +225,7 @@ header {
 
 .about-content,
 .experience-content,
+.skills-content,
 .contact-content {
   display: flex;
   justify-content: space-between;
@@ -234,10 +237,289 @@ header {
   z-index: 1;
 }
 
-/* About Image Sticky */
+.about-text,
+.experience-text,
+.skills-text,
+.contact-text {
+  flex: 1;
+  max-width: 600px;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.about-image,
+.experience-image,
+.skills-image,
+.contact-image {
+  flex-shrink: 0;
+  align-self: flex-start;
+}
+
+.about-image img,
+.experience-image img,
+.skills-image img,
+.contact-image img {
+  width: 350px;
+  border-radius: 12px;
+  border: 3px solid #e0e0e0;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  background: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.about-image img:hover,
+.experience-image img:hover,
+.skills-image img:hover,
+.contact-image img:hover {
+  transform: scale(1.03);
+}
+
+/* Footer */
+footer {
+  background: #0a0a0a;
+  color: #f5f5f5;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-content,
+  .about-content,
+  .experience-content,
+  .skills-content,
+  .contact-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-image img,
+  .about-image img,
+  .experience-image img,
+  .skills-image img,
+  .contact-image img {
+    width: 250px;
+    margin-top: 1.5rem;
+  }
+}
+/* Diploma Hover Popup */
+.diploma-text {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  color: #00a99d;
+  transition: color 0.3s ease;
+}
+
+.diploma-text:hover {
+  color: #fff;
+}
+
+.diploma-image {
+  display: none;
+  position: absolute;
+  top: 120%;
+  left: 0;
+  z-index: 10;
+}
+
+.diploma-text:hover .diploma-image {
+  display: block;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.diploma-image img {
+  width: 400px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+/* Smooth fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.card-container {
+  perspective: 1000px;
+  display: inline-block;
+}
+
+.card {
+  width: 300px;
+  height: 400px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
+
+.card:hover {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.card-front {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+.card-front img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-bottom: 2px solid #00a99d;
+}
+
+.card-back {
+  background: #00a99d;
+  color: #fff;
+  transform: rotateY(180deg);
+  text-align: center;
+  padding: 1.5rem;
+}
+/* 3D Flip Animation */
+.card-container {
+  perspective: 1000px;
+}
+
+.card {
+  width: 300px;
+  height: 400px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease;
+}
+
+.card:hover {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.card-front {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+.card-front img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-bottom: 2px solid #00a99d;
+}
+.card-back {
+  background-color: #00a99d;
+  color: #fff;
+  transform: rotateY(180deg);
+  text-align: left; /* Change from center to left for better readability */
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+.card-back h3 {
+  text-align: center; /* Keep the heading centered */
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.card-back ul {
+  list-style-type: disc; /* Adds bullet points */
+  padding-left: 1.5rem; /* Indent bullets properly */
+  line-height: 1.6; /* Improves spacing between lines */
+}
+
+.card-back li {
+  margin-bottom: 0.5rem;
+}
+.hover-title {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  color: #fff;
+}
+
+.popup-image {
+  display: none;
+  position: absolute;
+  top: 120%;
+  left: 0;
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.popup-image img {
+  width: 440px;
+  border: 2px solid #00a99d;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+.hover-title {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  color: #fff;
+}
+
+.popup-image {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: -480px; /* adjust to fit your layout */
+  z-index: 10;
+  opacity: 0;
+  transform: translateX(50px); /* start slightly off-screen */
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.popup-image img {
+  width: 440px; /* double size */
+  border: 2px solid #00a99d;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.hover-title:hover .popup-image {
+  display: block;
+  opacity: 1;
+  transform: translateX(0); /* slides into place */
+}
+.about-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
 .about-image {
-  position: sticky;
-  top: 100px;
+  position: sticky;   /* keeps it fixed while scrolling within section */
+  top: 100px;         /* distance from top of viewport */
   align-self: flex-start;
 }
 
@@ -252,38 +534,45 @@ header {
 .about-image img:hover {
   transform: scale(1.03);
 }
-
-/* Skills Section with Dark Transparent Overlay */
-.skills-section {
-  position: relative;
-  padding: 5rem 2rem;
-  min-height: 100vh;
-  background-image: url('backround 4k.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+.skills-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  color: #f5f5f5;
 }
 
-.skills-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  border-radius: 12px;
-  z-index: 1;
+.skills-content h1 {
+  font-size: 1.8rem;
+  color: #00a99d;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #00a99d;
+  padding-bottom: 0.5rem;
+}
+
+.skills-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 2rem;
+}
+
+.skills-list li {
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.skills-list li strong {
+  color: #ffd700; /* elegant gold accent */
 }
 
 .skills-content {
-  position: relative;
-  z-index: 2;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  color: #f5f5f5;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
-  max-width: 1100px;
-  margin: 0 auto;
-  color: #f5f5f5;
 }
 
 .skills-content h1 {
@@ -299,7 +588,6 @@ header {
 .skills-list {
   list-style: none;
   padding-left: 0;
-  margin-bottom: 2rem;
 }
 
 .skills-list li {
@@ -314,22 +602,12 @@ header {
   font-weight: 600;
 }
 
+.skills-content ul {
+  margin-bottom: 2rem;
+}
+
 @media (max-width: 900px) {
   .skills-content {
     grid-template-columns: 1fr;
   }
-}
-
-/* Footer */
-footer {
-  background: #0a0a0a;
-  color: #f5f5f5;
-  text-align: center;
-  padding: 1rem;
-}
-
-/* Animation */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
 }

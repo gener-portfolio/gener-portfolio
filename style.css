@@ -92,8 +92,9 @@ header {
   height: 100%;
   background-image: url('backround 4k.jpg'); /* check spelling/path */
   background-size: cover;
-  background-position: center;
+  background-position: center center;
   background-repeat: no-repeat;
+  background-attachment: fixed; 
   z-index: -1;
 }
 
@@ -198,7 +199,6 @@ header {
 }
 
 /* Shared Section Styles (About, Experience, Skills, Contact) */
-.index,
 .about,
 .experience,
 .skills,
@@ -213,7 +213,7 @@ header {
   background-attachment: fixed; 
   color: #f5f5f5;
 }
-.index::after,
+
 .about::after,
 .experience::after,
 .skills::after,

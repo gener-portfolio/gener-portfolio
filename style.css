@@ -492,7 +492,7 @@ footer {
   display: none;
   position: absolute;
   top: 0;          /* aligns vertically with the text */
-  left: -480px;    /* moves the popup to the left side */
+  Right: -480px;    /* moves the popup to the left side */
   z-index: 10;
   opacity: 0;
   transition: opacity 0.3s ease;

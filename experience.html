@@ -101,10 +101,15 @@
   </p>
   <section class="recognition-slider">
   <div class="recognition-container">
-    <img src="img4.jpg" alt="Recognition 1">
-    <img src="img5.jpg" alt="Recognition 2">
-    <img src="img6.jpg" alt="Recognition 3">
-  </div>
+   <img src="recognition1.jpg" alt="Recognition 1" onclick="openPopup(this)">
+  <img src="recognition2.jpg" alt="Recognition 2" onclick="openPopup(this)">
+  <img src="recognition3.jpg" alt="Recognition 3" onclick="openPopup(this)">
+
+    <!-- Popup viewer -->
+<div id="popup" class="popup">
+  <span class="close" onclick="closePopup()">&times;</span>
+  <img class="popup-content" id="popup-img">
+</div>
     </section>
 </div>
 

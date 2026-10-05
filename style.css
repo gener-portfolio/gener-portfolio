@@ -657,18 +657,16 @@ footer {
   width: 80%;
   max-width: 1200px;
 }
-
 .image-slider {
-  margin-top: 2rem;
-  text-align: center;
+  overflow: hidden;
   width: 100%;
+  margin-top: 2rem;
 }
 
 .slider-container {
   display: flex;
-  justify-content: center;
   gap: 1rem;
-  perspective: 1000px;
+  animation: scrollSlider 20s linear infinite;
 }
 
 .slider-container img {
@@ -681,6 +679,13 @@ footer {
 }
 
 .slider-container img:hover {
-  transform: translateZ(50px) scale(1.05);
+  transform: scale(1.05);
   box-shadow: 0 15px 30px rgba(0,0,0,0.6);
 }
+
+/* Auto-scroll animation */
+@keyframes scrollSlider {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+

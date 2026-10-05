@@ -723,4 +723,14 @@ footer {
 .tools-list li {
   margin-bottom: 0.5rem;
 }
+.tools-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.badge-icon {
+  width: 28px;
+  height: 28px;
+}
 

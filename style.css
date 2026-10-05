@@ -588,20 +588,20 @@ footer {
     display: inline;
   }
 }
-
 #contact {
   background-color: #111;
   color: #fff;
   padding: 40px;
   border-radius: 15px;
-  width: 400px;
+  max-width: 400px; /* use max-width for responsiveness */
   margin: 50px auto;
-  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
 #contact h2 {
   text-align: center;
   margin-bottom: 20px;
+  font-size: 1.8em;
 }
 
 .contact-form input,
@@ -613,6 +613,13 @@ footer {
   border-radius: 10px;
   background-color: #222;
   color: #fff;
+  font-size: 1em;
+  outline: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #00bfa5; /* subtle highlight when focused */
 }
 
 .contact-form textarea {
@@ -629,6 +636,7 @@ footer {
   border-radius: 10px;
   cursor: pointer;
   font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
 .contact-form button:hover {

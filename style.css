@@ -258,8 +258,7 @@ header {
 
 .about-image img,
 .experience-image img,
-.skills-image img,
-.contact-image img {
+.skills-image img {
   width: 350px;
   border-radius: 12px;
   border: 3px solid #e0e0e0;
@@ -270,8 +269,7 @@ header {
 
 .about-image img:hover,
 .experience-image img:hover,
-.skills-image img:hover,
-.contact-image img:hover {
+.skills-image img:hover {
   transform: scale(1.03);
 }
 

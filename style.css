@@ -832,26 +832,27 @@ footer {
   color: #00bfa6;
 }
 .skills-section {
-  margin-top: 3rem;
   display: flex;
   justify-content: center;
+  margin-top: 3rem;
 }
 
 .skills-container {
-  background: rgba(0,0,0,0.4);
+  background: rgba(0, 0, 0, 0.4); /* dark transparent background */
   border-radius: 10px;
   padding: 2rem;
   max-width: 1000px;
   width: 100%;
   border-left: 3px solid #00bfa6;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
 }
 
 .section-title {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   color: #00bfa6;
-  margin-bottom: 1.5rem;
   text-align: center;
+  margin-bottom: 1.5rem;
 }
 
 .skills-list {
@@ -867,3 +868,6 @@ footer {
   margin-bottom: 0.8rem;
 }
 
+.skills-list strong {
+  color: #ffcc00; /* highlight titles in gold */
+}

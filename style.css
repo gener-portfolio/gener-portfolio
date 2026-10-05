@@ -762,4 +762,35 @@ footer {
   box-shadow: 0 10px 25px rgba(0,0,0,0.5);
   border: 2px solid #00bfa6;
 }
+.recognition-slider {
+  overflow: hidden;
+  width: 100%;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.recognition-container {
+  display: flex;
+  gap: 1rem;
+  animation: scrollRecognition 25s linear infinite;
+}
+
+.recognition-container img {
+  width: 280px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+  border: 2px solid #00bfa6;
+  transition: transform 0.6s ease;
+}
+
+.recognition-container img:hover {
+  transform: scale(1.05);
+}
+
+/* Auto-scroll animation */
+@keyframes scrollRecognition {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
 

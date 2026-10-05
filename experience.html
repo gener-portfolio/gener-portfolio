@@ -114,7 +114,28 @@
   <span class="close" onclick="closePopup()">&times;</span>
   <img class="popup-content" id="popup-img">
 </div>
-  
+  <!-- lahat ng sections mo dito (About, Experience, Recognition, etc.) -->
+
+<!-- Popup viewer -->
+<div id="popup" class="popup">
+  <span class="close" onclick="closePopup()">&times;</span>
+  <img class="popup-content" id="popup-img">
+</div>
+
+<!-- JavaScript dapat nasa pinakababa -->
+<script>
+function openPopup(img) {
+  document.getElementById("popup").style.display = "flex";
+  document.getElementById("popup-img").src = img.src;
+}
+
+function closePopup() {
+  document.getElementById("popup").style.display = "none";
+}
+</script>
+</body>
+</html>
+
 
       </div>
 

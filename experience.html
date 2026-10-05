@@ -133,6 +133,24 @@ function closePopup() {
   document.getElementById("popup").style.display = "none";
 }
 </script>
+  <script>
+function openPopup(img) {
+  const popup = document.getElementById("popup");
+  const popupImg = document.getElementById("popup-img");
+  popup.style.display = "flex";
+  popupImg.src = img.src;
+
+  // kapag kinlick ang mismong image, magsasara rin
+  popupImg.onclick = function() {
+    closePopup();
+  };
+}
+
+function closePopup() {
+  document.getElementById("popup").style.display = "none";
+}
+</script>
+      
 </body>
 </html>
 
